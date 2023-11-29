@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task</title>
+    <script src="js/forScript.js"></script>
+</head>
+<body>
+   <h3>Завдання 3</h3>
+    <form>
+        <textarea id="output" rows="2" cols="50" readonly></textarea><br>
+        <button type="button" onclick="runTask()" align="center">Run Task</button>
+    </form>
+
+    
+    <h3>Пошук цифр</h3>
+    <form>
+        <label for="textInput">Введіть текст:</label>
+        <input type="text" id="textInput" name="textInput" required>
+        <button type="button" onclick="searchNumbers()">Пошук інформації</button><br>
+        
+        <!-- Текстове поле для виведення результату -->
+        <label for="result">Результат: </label><br>
+        <textarea id="result" name="result" rows="1" cols="50" readonly></textarea>
+    </form>
+
+
+
+    <h3>Видалення від'ємних елементів</h3>
+    <form>
+        <label for="inputArray">Введіть елементи масиву :</label>
+        <input type="text" id="inputArray" name="inputArray" required>
+        <button type="button" onclick="removeNegativeElements()">Видалити від'ємні елементи</button><br>
+        
+        <!-- Текстове поле для виведення результату -->
+        <label for="result6">Результат:</label><br>
+        <textarea id="result6" name="result6" rows="1" cols="50" readonly></textarea>
+    </form> 
+</body>
+</html>

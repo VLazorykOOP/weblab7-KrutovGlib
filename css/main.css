@@ -1,0 +1,62 @@
+
+header {
+    background-color: #333;
+    color: #faf7f7;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+.list {
+    padding-top: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.list:active{
+    color: red;
+}
+
+/* Анімація для посилань */
+ul li a {
+    text-decoration: none;
+    color: #e16767;
+    transition: color 0.3s ease-in-out;
+    padding: 5px;
+}
+
+ul li a:hover {
+    cursor: pointer;
+    color: rgb(197, 216, 47);
+    background-color: #333;
+    transform: scale(1.1);
+    
+}
+
+/* Анімація для деталей (details) */
+details {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+    transition: max-width 0.5s ease-in-out;
+    background-color: #f6e1e1;
+}
+
+details:hover {
+    max-width: 500px;
+}
+body{
+    background-color: #ded8d8;
+}

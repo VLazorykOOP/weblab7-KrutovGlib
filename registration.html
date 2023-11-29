@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація в магазині</title>
+<link rel="stylesheet" href="css/registration.css">
+</head>
+<body>
+    
+
+    <form action="/registration" method="post" id="registrationForm">
+        <h2>Реєстрація</h2>
+
+        <label for="fullName">Ім'я:</label>
+        <input type="text" name="firstname" placeholder="Іван" required>
+
+        <label for="fullName">Прізвище</label>
+        <input type="text" name="surnamame" placeholder="Івнаов" required>
+
+        <label for="email">Електронна пошта:</label>
+        <input type="email" name="email" placeholder="xxxxxx@gmail.com" required>
+
+        <label for="password">Пароль:</label>
+        <input type="password" name="password" required minlength="6">
+
+        <label for="confirmPassword">Підтвердіть пароль:</label>
+        <input type="password" name="confirmPassword" required minlength="6">
+
+        <label for="age">Ваш вік:</label>
+        <input type="number" name="age" placeholder="18+" min="18">
+
+        <label for="country">Країна проживання:</label>
+        <select  name="country" required>
+            <option value="" disabled selected>Виберіть країну</option>
+            <option value="ua">Україна</option>
+            <option value="in">Індія</option>
+            <option value="us">Сполучені Штати</option>
+        </select>
+        <button type="submit">Зареєструватися</button>
+    </form>
+
+</body>
+</html>

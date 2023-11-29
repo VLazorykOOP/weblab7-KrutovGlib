@@ -1,0 +1,16 @@
+a{
+    color: rgb(11, 86, 86);
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+    text-decoration: underline;
+    text-decoration-color: blue;
+    cursor: pointer;
+
+}
+
+body{
+    background-color: #ccff99;
+}

@@ -1,12 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/main.css">
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Script-Type" content="text/javascript" >
-    <title>Lab7</title>
+    <title>Web Lab # 7</title>
+    <meta name="name" content="Glib Krutov">
+    <meta name="Keywords" content="Krutov,Alcohol,drink,party">
+    <script src="js/script.js" defer></script>
+     <title>Author</title>
 </head>
-<body>
-    <h1> !!! Додайте свої сторінки сайту створені в лаб. роботах 1-6  </h1>
+<body onload="handleLoad()">
+    <header>
+        <h1 onclick="handleClick()" >Головна сторінка</h1>
+        <p ondblclick="handlondblclick()">Це головна сторінка, за допомогою якої ви можете подивитись інші</p>
+    </header>
+    
+    <nav>
+        <details class="list" >
+            <summary>Корисні посилання</summary>
+            <ul type = "circule">
+                <li><a href="aboutMe.html" >Перейти на сторінку автора.</a></li><br>
+                <li><a href="MyCompany.html" >Сторінка Компанії</a></li><br>
+                <li><a href="svg.html">Lab 6</a></li><br>
+                <li><a href="forScript.html">Форма</a></li><br>
+                <li><a href="lab9.html">Lab 9</a></li>
+            </ul>
+        </details>
+
+    </nav>
+    
 </body>
 </html>

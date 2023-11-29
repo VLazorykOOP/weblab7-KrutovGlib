@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>laba 6</title>
+</head>
+<body>
+    <!-- <svg width="600" height="600">
+        <line x1="100" y1="300" x2="450" y2="300" stroke="black" stroke-width="2"></line>
+        <line x1="100" y1="0" x2="100" y2="450" stroke="black" stroke-width="2"></line>
+            <text x="90" y="310" fill="black">0</text>
+            <text x="450" y="310" fill="black">Х</text>
+            <text x="90" y="20" fill="black">У</text>  
+            <text x="90" y="245" fill="black">1</text>
+            <text x="90" y="180" fill="black">2</text>
+            <text x="90" y="115" fill="black">3</text>
+            <text x="160" y="320" fill="black">1</text>
+            <text x="220" y="320" fill="black">2</text>
+            <text x="280" y="320" fill="black">3</text>
+            <text x="340" y="320" fill="black">4</text>
+            <text x="400" y="320" fill="black">5</text> 
+            <text x="85" y="375" fill="black">-1</text>
+            <text x="85" y="440" fill="black">-2</text>
+
+            <rect x="100" y="175" width="60" height="60" fill="blue">
+                <animate attributeName="fill" values="perpule;green;yellow;red" dur="4s" repeatCount="indefinite" />
+            </rect>
+
+            <rect x="100" y="355" width="60" height="60" fill="dark"></rect>
+
+            <rect x="160" y="115" width="60" height="60" fill="dark">
+                <animate attributeName="x" values="160;200;160" dur="3s" repeatCount="indefinite"/>
+            </rect>
+
+            <circle cx="223" cy="237" r="63" fill="dark">
+                <animate attributeName="r" values="63;30;63" dur="3s" repeatCount="indefinite" />
+            </circle>
+
+            <circle cx="347" cy="237" r="63" fill="dark">
+                <animateTransform attributeName="transform" type="skewX" values="0;20;0" dur="3s" repeatCount="indefinite" />
+            </circle>
+
+            <rect x="350" y="115" width="60" height="60" fill="dark">
+                <animate attributeName="x" values="350;300;350" dur="3s" repeatCount="indefinite"/>
+            </rect>
+
+            <rect x="410" y="175" width="60" height="60" fill="dark">
+                <animate attributeName="fill" values="perpule;green;yellow;red" dur="4s" repeatCount="indefinite" />
+            </rect>
+
+            <ellipse cx="283" cy="360" rx="123" ry="60" fill="red"></ellipse> 
+            <rect x="406" y="355" width="60" height="60" fill="dark">
+                
+                <animateTransform attributeName="transform" type="rotate" values="0;360" dur="5s" repeatCount="indefinite" />
+            </rect>
+
+            <rect  x="207" y="420" width="150" height="70" fill="dark" >
+                <animateTransform attributeName="transform" type="rotate" from="0 250 450" to="360 250 450" dur="4s" repeatCount="indefinite"/>
+            </rect>
+            </svg> -->
+
+     <canvas id="myCanvas" width="600" height="600" style="border:1px solid black;"></canvas>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    // Draw lines
+    ctx.beginPath();
+    ctx.moveTo(100, 300);
+    ctx.lineTo(450, 300);
+    ctx.moveTo(100, 0);
+    ctx.lineTo(100, 450);
+    ctx.stroke();
+
+    // Draw text
+    ctx.fillStyle = "black";
+    ctx.fillText("0", 90, 310);
+    ctx.fillText("Х", 450, 310);
+    ctx.fillText("У", 90, 20);
+    ctx.fillText("1", 90, 245);
+    ctx.fillText("2", 90, 180);
+    ctx.fillText("3", 90, 115);
+    ctx.fillText("1", 160, 320);
+    ctx.fillText("2", 220, 320);
+    ctx.fillText("3", 280, 320);
+    ctx.fillText("4", 340, 320);
+    ctx.fillText("5", 400, 320);
+    ctx.fillText("-1", 85, 375);
+    ctx.fillText("-2", 85, 440);
+
+    // Draw rectangles
+    ctx.fillStyle = "blue";
+    ctx.fillRect(100, 175, 60, 60);
+
+    ctx.fillStyle = "dark";
+    ctx.fillRect(100, 355, 60, 60);
+    ctx.fillRect(160, 115, 60, 60);
+
+    ctx.fillRect(410, 175, 60, 60);
+    ctx.fillRect(406, 355, 60, 60);
+    ctx.fillRect(207, 420, 150, 70);
+
+
+    // Draw circles
+    ctx.beginPath();
+    ctx.fillStyle = "dark";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(347, 237, 63, 0, 2 * Math.PI);
+    ctx.fill();
+
+    // Draw ellipses
+    ctx.beginPath();
+    ctx.ellipse(283, 360, 123, 60, 0, 0, 2 * Math.PI);
+    ctx.fillStyle = "red";
+    ctx.fill();
+
+    function animateMoveRightAndBack() {
+    var rect = { x: 350, y: 115, width: 60, height: 60, color: "green" };
+    var moveRight = true;
+
+    setInterval(function () {
+        ctx.clearRect(rect.x, rect.y, rect.width, rect.height);
+
+        if (moveRight) {
+            rect.x += 2; // Збільшуємо x-координату для переміщення вправо
+            if (rect.x === 400) {
+                moveRight = false;
+            }
+        } else {
+            rect.x -= 2; // Зменшуємо x-координату для повернення назад
+            if (rect.x ===350) {
+                moveRight = true;
+            }
+        }
+
+        drawRect(rect);
+    }, 50);
+}
+
+    function drawRect(rect) {
+                ctx.fillStyle = rect.color;
+                ctx.fillRect(rect.x, rect.y, rect.width, rect.height);
+            }
+
+
+    
+          animateMoveRightAndBack();
+          animateCircle();
+
+
+          // Функція для анімації кола
+    function animateCircle() {
+            var circle = { x: 223, y: 237, radius: 30, color: "red", growing: true };
+              setInterval(function () {
+                  ctx.clearRect(circle.x - circle.radius - 1, circle.y - circle.radius - 1, 2 * circle.radius + 2, 2 * circle.radius + 2);
+
+                  if (circle.growing) {
+                      circle.radius += 1;
+                      if (circle.radius >= 60) {
+                          circle.growing = false;
+                      }
+                  } else {
+                      circle.radius -= 1;
+                      if (circle.radius <= 30) {
+                          circle.growing = true;
+                      }
+                  }
+
+                  drawCircle(circle);
+              }, 50);
+          }
+          // Функція для малювання кола
+    function drawCircle(circle) {
+              ctx.beginPath();
+              ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+              ctx.fillStyle = circle.color;
+              ctx.fill();
+          }
+});
+
+
+    
+  
+
+   
+
+  
+    </script>
+</body> 
+</html>
