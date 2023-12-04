@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="Author" lang="uk" content="Крутов Гліб Максимович">
+    <meta name="Keywords" content="Web - сторiнка, audio video ">
+    <title>VIDEO|AUDIO</title>
+    <script src="js/lab9.js"></script>
+    <link rel="stylesheet" href="css/lab9.css">
+</head>
+
+<body>
+        <h2> Бібліотека медіа-ресурсів </h2>
+
+    <main>
+    <br>
+    <div class="audio">
+        <h3> Бібліотека audio</h3>
+        <form>
+            <select id="audioform" onchange="set_arec()">
+                <option value="lydi_yak_korabli.mp3" selected> Скрябін. Люди як кораблі </option>
+                <option value="mam.mp3"> Скрябін. Мам </option>
+                <option value="stari_foto.mp3">Скрябін. Старі фотографії </option>
+            </select>
+        </form>
+        <br>
+        <audio id="audioplayer" controls loop>
+            <source src="audio/lydi_yak_korabli.mp3" type="audio/mp3">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
+    
+    <div class="video">
+        <h3> Бібліотека video</h3>
+        <br>
+        <form>
+            <select id="videform" onchange="set_vrec()">
+                <option value="na_nebi.mp4" selected> Океан Ельзи. На небі </option>
+                <option value="ne_tvoya_war.mp4"> Океан Ельзи. Не твоя війна </option>
+                <option value="strilay.mp4"> Океан Ельзи. Стріляй</option>
+            </select>
+        </form>
+        <br>
+        <br>
+        <video id="videoplayer" tabindex="0" controls width="600" height="360">
+            <source src="video/na_nebi.mp4" type='video/mp4'>
+            <source src="video/ne_tvoya_war.mp4" type='video/mp4'>
+            <source src="video/strilay.mp4" type='video/mp4'>
+        </video>
+        <br>
+    </div>
+    <br>
+    </main>
+</body>
+</html>

@@ -1,0 +1,32 @@
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    background-color: rgb(251, 251, 207);
+    padding: 10px;
+}
+
+.audio{
+    text-align: center;
+    background-color:bisque;
+    width: 600px;
+}
+.video{
+    background-color: blanchedalmond;
+    text-align: center;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(225, 253, 253);
+}
+form select{
+    border: 0cap;
+    border-radius: 5px;
+    background-color: rgb(177, 231, 213);
+    padding: 5px;
+}
+
